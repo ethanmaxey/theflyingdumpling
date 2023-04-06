@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/theflyingdumpling.ico"/>
       </Head>
 
-      <Hero/>
+      <Hero />
     </>
   )
 }

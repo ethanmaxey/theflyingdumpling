@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Hero = () => {
+const Logo = () => {
     return (
         <div className="fixed top-1/2 right-1/4 transform translate-y-1/2">
             {/* Overlay */}
@@ -27,4 +27,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default Logo

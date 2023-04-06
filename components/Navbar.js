@@ -1,11 +1,11 @@
 import Link from "next/link"
 import React, {useEffect, useState} from "react"
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import Image from 'next/image'
 
 export default function Navbar() {
 
     const [nav, setNav] = useState(false)
-
     const [color, setColor] = useState('transparent')
     const [textColor, setTextColor] = useState('white')
 
@@ -31,14 +31,20 @@ export default function Navbar() {
         <div style={{backgroundColor: `${color}`}} className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
             <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
 
-                <h1 style={{color: `${textColor}`}} className = 'font-bold text-4xl'>
+                <h1 className=
+                    "fixed left-1/4 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                >
                     Logo
                 </h1>
 
-                <ul style={{color: `${textColor}`}} className="hidden sm:flex">
-                    <li className="p-4"><Link href="/menu">Menu</Link></li>
-                    <li className="p-4"><Link href="/hours">Hours</Link></li>
-                    <li className="p-4"><Link href="/location">Location</Link></li>
+                <ul 
+                    style={{color: `${textColor}`}} 
+                    className="hidden sm:flex container mx-auto justify-end py-4"
+                >
+
+                    <li className="p-4 px-14"><Link href="/menu">Menu</Link></li>
+                    <li className="p-4 px-14"><Link href="/hours">Hours</Link></li>
+                    <li className="p-4 px-14"><Link href="/location">Location</Link></li>
                 </ul>
 
                 {/* Mobile Button*/}
